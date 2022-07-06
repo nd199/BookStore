@@ -1,4 +1,12 @@
 package com.naren.bookstore.Repository;
 
-public interface BookRepository extends org.springframework.data.jpa.repository.JpaRepository<com.naren.bookstore.Entity.Book, java.lang.Long> {
+import com.naren.bookstore.Entity.Book;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BookRepository extends JpaRepository<Book, Long> {
+
+    Book findByAuthor(String author);
+    Book findByTitle(String title);
+    Book findByPriceGreaterThan(Double price);
+
 }

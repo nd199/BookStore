@@ -1,4 +1,4 @@
-package com.naren.bookstore;
+package com.naren.bookstore.Entity;
 
 import lombok.Data;
 
